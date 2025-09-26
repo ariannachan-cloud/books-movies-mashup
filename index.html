@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Books + Movies Mashup</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Add this inline or move it to style.css */
+    .search-row {
+      display: flex;
+      align-items: center;
+      gap: 8px; /* space between items */
+      margin-bottom: 1rem;
+    }
+
+    .search-row label {
+      font-weight: bold;
+    }
+
+    .search-row input {
+      flex: 1; /* makes input stretch */
+      padding: 6px;
+    }
+
+    .search-row button {
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Books + Movies Mashup</h1>
+
+    <div class="search-row">
+      <label for="searchInput">Enter book title</label>
+      <input id="searchInput" type="text" placeholder="e.g., Harry Potter" />
+      <button id="searchBtn">Search</button>
+      <button id="retryBtn" style="display:none">Retry</button>
+    </div>
+
+    <div id="status" class="state"></div>
+
+    <table id="results" aria-live="polite">
+      <thead>
+        <tr>
+          <th>Book Title</th>
+          <th>Author(s)</th>
+          <th>Book Year</th>
+          <th>Movie Year</th>
+          <th>Genre</th>
+          <th>Poster</th>
+          <th>Adapted After</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <footer class="small muted mt-2">
+      APIs: Google Books + OMDb
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
