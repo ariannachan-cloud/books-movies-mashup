@@ -26,5 +26,9 @@ This project allows users to search for books using the Google Books API and att
 - Google Books API requires a q parameter; visiting the base URL alone returns an error.
 - Poster images or genres may be missing for some movies.
 
+**Error & Loading States:**
+- A "Loading..." message is shown while data is being fetched.  
+- If the network fails or the API returns an error, a "Network or API error" message is displayed along with a Retry button.  
+
 **AI Usage Note:**
 - AI was used for inspiration on which APIs to use. 
